@@ -56,12 +56,25 @@
       color: #fff;
     }
 
-    .player-controls .js-play-button,
-    .player-controls .js-play-button:hover,
-    .player-controls .js-play-button:focus {
-      background: transparent !important;
-      border-color: transparent !important;
-      box-shadow: none !important;
+    #player .player-controls .btn.js-play-button,
+    #player .player-controls .btn.js-play-button:hover,
+    #player .player-controls .btn.js-play-button:focus,
+    #player .player-controls .btn.js-pause-button,
+    #player .player-controls .btn.js-pause-button:hover,
+    #player .player-controls .btn.js-pause-button:focus,
+    #player .player-controls .btn.js-volume-button,
+    #player .player-controls .btn.js-volume-button:hover,
+    #player .player-controls .btn.js-volume-button:focus,
+    #player .player-controls .btn.js-mute-button,
+    #player .player-controls .btn.js-mute-button:hover,
+    #player .player-controls .btn.js-mute-button:focus,
+    #player .player-controls .btn.js-fullscreen-button,
+    #player .player-controls .btn.js-fullscreen-button:hover,
+    #player .player-controls .btn.js-fullscreen-button:focus {
+      background: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      color: #fff;
     }
 
     .js-progress {
@@ -113,9 +126,15 @@
             <button class="btn js-pause-button" type="button" hidden>
               <i class="fa fa-pause" aria-hidden="true"></i>
             </button>
-            <button class="btn js-volume-button" type="button">Volume</button>
-            <button class="btn js-mute-button" type="button" hidden>Mute</button>
-            <button class="btn js-fullscreen-button" type="button">Fullscreen</button>
+            <button class="btn js-volume-button" type="button">
+              <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </button>
+            <button class="btn js-mute-button" type="button" hidden>
+              <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </button>
+            <button class="btn js-fullscreen-button" type="button">
+              <i class="fa fa-expand" aria-hidden="true"></i>
+            </button>
           </div>
 
           <div class="mb-2">
