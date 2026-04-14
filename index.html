@@ -25,7 +25,6 @@
     }
 
     .player-frame {
-      --panel-height: 92px;
       background: #0b0b0b;
       border-radius: 12px;
       overflow: hidden;
@@ -33,7 +32,7 @@
     }
 
     .player-top-strip {
-      height: var(--panel-height);
+      height: 92px;
       background: #0b0b0b;
     }
 
@@ -41,7 +40,7 @@
       background: #0b0b0b;
       color: #fff;
       padding: 12px;
-      min-height: var(--panel-height);
+      min-height: 92px;
     }
 
     .player-controls .btn {
@@ -56,21 +55,9 @@
       color: #fff;
     }
 
-    #player .player-controls .btn.js-play-button,
-    #player .player-controls .btn.js-play-button:hover,
-    #player .player-controls .btn.js-play-button:focus,
-    #player .player-controls .btn.js-pause-button,
-    #player .player-controls .btn.js-pause-button:hover,
-    #player .player-controls .btn.js-pause-button:focus,
-    #player .player-controls .btn.js-volume-button,
-    #player .player-controls .btn.js-volume-button:hover,
-    #player .player-controls .btn.js-volume-button:focus,
-    #player .player-controls .btn.js-mute-button,
-    #player .player-controls .btn.js-mute-button:hover,
-    #player .player-controls .btn.js-mute-button:focus,
-    #player .player-controls .btn.js-fullscreen-button,
-    #player .player-controls .btn.js-fullscreen-button:hover,
-    #player .player-controls .btn.js-fullscreen-button:focus {
+    .player-controls .btn--transparent,
+    .player-controls .btn--transparent:hover,
+    .player-controls .btn--transparent:focus {
       background: transparent;
       border-color: transparent;
       box-shadow: none;
@@ -85,25 +72,19 @@
       overflow: hidden;
     }
 
-    .js-play-button,
-    .js-pause-button,
-    .js-volume-button,
-    .js-mute-button,
-    .js-fullscreen-button,
-    .fa {
-      cursor: pointer;
-    }
-
     .js-progress-slider {
       height: 100%;
       width: 0;
       background: #ffd54a;
-      color: transparent;
     }
 
     .js-video-container {
       width: 100%;
       height: 100%;
+    }
+
+    .time-display {
+      display: inline-block;
     }
   </style>
 </head>
@@ -120,27 +101,27 @@
 
         <div class="player-controls">
           <div class="d-flex flex-wrap gap-2 mb-2">
-            <button class="btn js-play-button" type="button">
+            <button class="btn btn--transparent js-play-button" type="button">
               <i class="fa fa-play" aria-hidden="true"></i>
             </button>
-            <button class="btn js-pause-button" type="button" hidden>
+            <button class="btn btn--transparent js-pause-button" type="button" hidden>
               <i class="fa fa-pause" aria-hidden="true"></i>
             </button>
-            <button class="btn js-volume-button" type="button">
+            <button class="btn btn--transparent js-volume-button" type="button">
               <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
-            <button class="btn js-mute-button" type="button" hidden>
+            <button class="btn btn--transparent js-mute-button" type="button" hidden>
               <i class="fa fa-volume-up" aria-hidden="true"></i>
             </button>
-            <button class="btn js-fullscreen-button" type="button">
+            <button class="btn btn--transparent js-fullscreen-button" type="button">
               <i class="fa fa-expand" aria-hidden="true"></i>
             </button>
           </div>
 
           <div class="mb-2">
-            <span class="js-current-time">00:00</span>
+            <span class="js-current-time time-display">00:00</span>
             <span class="mx-1">/</span>
-            <span class="js-duration">00:00</span>
+            <span class="js-duration time-display">00:00</span>
           </div>
 
           <div class="js-progress">
