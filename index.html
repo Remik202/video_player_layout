@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Видео плеер</title>
+  <link rel="stylesheet" href="./static/bootstrap.min.css">
   <link rel="stylesheet" href="./static/font-awesome.min.css">
   <style>
     body {
@@ -32,11 +33,25 @@
       overflow: hidden;
     }
 
+    .js-play-button,
+    .js-pause-button,
+    .js-volume-button,
+    .js-mute-button,
+    .js-fullscreen-button,
+    .fa {
+      cursor: pointer;
+    }
+
     .js-progress-slider {
       height: 100%;
       width: 0;
       background: #0d6efd;
       color: transparent;
+    }
+
+    .js-video-container {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -44,26 +59,32 @@
   <main class="container player-shell">
     <h1 class="h3 mb-3">Видеоплеер</h1>
 
-    <div id="player" class="player-box mb-3">
-      <div class="js-video-container w-100 h-100"></div>
-    </div>
+    <div id="player" class="mb-3">
+      <div class="player-box mb-2">
+        <div class="js-video-container w-100 h-100"></div>
+      </div>
 
-    <div class="d-flex flex-wrap gap-2 mb-2">
-      <i class="fa fa-play" aria-hidden="true"></i>
-      <button class="btn btn-primary js-pause-button" type="button" hidden>Pause</button>
-      <button class="btn btn-secondary js-volume-button" type="button">Volume</button>
-      <button class="btn btn-secondary js-mute-button" type="button" hidden>Mute</button>
-      <button class="btn btn-outline-dark js-fullscreen-button" type="button">Fullscreen</button>
-    </div>
+      <div class="d-flex flex-wrap gap-2 mb-2">
+        <button class="btn btn-primary js-play-button" type="button">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-primary js-pause-button" type="button" hidden>
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-secondary js-volume-button" type="button">Volume</button>
+        <button class="btn btn-secondary js-mute-button" type="button" hidden>Mute</button>
+        <button class="btn btn-outline-dark js-fullscreen-button" type="button">Fullscreen</button>
+      </div>
 
-    <div class="mb-2">
-      <span class="js-current-time">00:00</span>
-      <span class="mx-1">/</span>
-      <span class="js-duration">00:00</span>
-    </div>
+      <div class="mb-2">
+        <span class="js-current-time">00:00</span>
+        <span class="mx-1">/</span>
+        <span class="js-duration">00:00</span>
+      </div>
 
-    <div class="js-progress mb-3">
-      <div class="js-progress-slider">progress</div>
+      <div class="js-progress mb-3">
+        <div class="js-progress-slider">progress</div>
+      </div>
     </div>
   </main>
 
