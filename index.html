@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Видео плеер</title>
+  <link rel="stylesheet" href="./static/bootstrap.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: #f5f7fb;
+    }
+
+    .player-shell {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .player-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .js-progress {
+      height: 8px;
+      cursor: pointer;
+      background: #d4d8e1;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .js-progress-slider {
+      height: 100%;
+      width: 0;
+      background: #0d6efd;
+      color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <main class="container player-shell">
+    <h1 class="h3 mb-3">Видеоплеер</h1>
+
+    <div id="player" class="player-box mb-3">
+      <div class="js-video-container w-100 h-100"></div>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2 mb-2">
+      <button class="btn btn-primary js-play-button" type="button">Play</button>
+      <button class="btn btn-primary js-pause-button" type="button" hidden>Pause</button>
+      <button class="btn btn-secondary js-volume-button" type="button">Volume</button>
+      <button class="btn btn-secondary js-mute-button" type="button" hidden>Mute</button>
+      <button class="btn btn-outline-dark js-fullscreen-button" type="button">Fullscreen</button>
+    </div>
+
+    <div class="mb-2">
+      <span class="js-current-time">00:00</span>
+      <span class="mx-1">/</span>
+      <span class="js-duration">00:00</span>
+    </div>
+
+    <div class="js-progress mb-3">
+      <div class="js-progress-slider">progress</div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="./player.js"></script>
+  <script src="./static/bootstrap.bundle.min.js"></script>
+  <script>
+    createPlayer({
+      elementId: 'player',
+      src: 'https://dvmn.org/media/filer_public/78/db/78db3456-3fd3-4504-9ed9-d2d1fd843c0b/highest_peak.mp4'
+    });
+  </script>
+</body>
+</html>
