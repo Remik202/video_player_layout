@@ -1,7 +1,7 @@
 from livereload import Server
 
 
-DEFAULT_PORT = 5500
+DEFAULT_PORT = 8000
 DEFAULT_PAGE = "index.html"
 
 
