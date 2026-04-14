@@ -3,9 +3,11 @@
 Статическая страница с кастомным видеоплеером на базе `Playable` и `jQuery`.
 Проект запускается через `livereload` и автоматически обновляет страницу при изменении `html/css/js`.
 
+<img width="1205" height="859" alt="image" src="https://github.com/user-attachments/assets/53c3e11c-0674-4f32-b719-361c3aed4441" />
+
 ## Опубликованный сайт
 
-Пока не опубликован.
+[Сайт](https://remik202.github.io/video_player_layout/)
 
 ## Запуск
 
